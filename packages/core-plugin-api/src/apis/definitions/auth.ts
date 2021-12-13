@@ -15,6 +15,7 @@
  */
 
 import { ApiRef, createApiRef } from '../system';
+import { IconComponent } from '../../icons/types';
 import { Observable } from '@backstage/types';
 
 /**
@@ -27,6 +28,33 @@ import { Observable } from '@backstage/types';
  *
  * const googleAuthApiRef = createApiRef<OAuthApi & OpenIDConnectApi>({ ... })
  */
+
+/**
+ * Information about the auth provider that we're requesting a login towards.
+ *
+ * @remarks
+ *
+ * This should be shown to the user so that they can be informed about what login is being requested
+ * before a popup is shown.
+ *
+ * @public
+ */
+export type AuthProviderInfo = {
+  /**
+   *
+   */
+  id: string;
+
+  /**
+   * Title for the auth provider, for example "GitHub"
+   */
+  title: string;
+
+  /**
+   * Icon for the auth provider.
+   */
+  icon: IconComponent;
+};
 
 /**
  * An array of scopes, or a scope string formatted according to the
