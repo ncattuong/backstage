@@ -1,5 +1,11 @@
 # @backstage/plugin-catalog-react
 
+## 0.6.7
+
+### Patch Changes
+
+- 6156fb8730: `useEntityTypeFilter`: Skip updating selected types if a kind filter change did not change them.
+
 ## 0.6.6
 
 ### Patch Changes
